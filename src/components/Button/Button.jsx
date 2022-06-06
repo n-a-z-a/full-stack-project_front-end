@@ -1,0 +1,16 @@
+import React from "react";
+import "./Button.scss";
+
+const Button = ({ buttonText, onClickEvent, type, name }) => {
+  return (
+    <button className="button"
+      onClick={onClickEvent}
+      type={type}
+      name={name}
+    >
+      {buttonText}
+    </button>
+  );
+};
+
+export default Button;
