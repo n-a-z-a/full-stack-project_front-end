@@ -12,7 +12,7 @@ const Home = () => {
       <h1>Favourite Tracks</h1>
       
       <div>
-        <Link to='/showtracks'>
+        <Link to='/tracklist'>
         <Button buttonText="show tracks" type="submit"/>
         </Link>
         
