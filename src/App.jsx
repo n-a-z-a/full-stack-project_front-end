@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     getTracks();
-  });
+  },[]);
 
   return (
     <div  className="app">

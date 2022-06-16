@@ -13,11 +13,11 @@ const Home = () => {
       
       <div>
         <Link to='/tracklist'>
-        <Button buttonText="show tracks" type="submit"/>
+        <Button key="tracklist" buttonText="show tracks" type="submit"/>
         </Link>
         
         <Link to='/addatrack'>
-        <Button buttonText="add a track" type="submit"/>
+        <Button key="addatrack" buttonText="add a track" type="submit"/>
         </Link>
       </div>
 

@@ -1,12 +1,12 @@
 import "./Track.scss";
 
-const Track = (props) => {
+const Track = ({track}) => {
   const {
     title,
     artist,
     genre,
     dateCreated
-  } = props.track;
+  } = track;
 
   return (
     <div className="track">
