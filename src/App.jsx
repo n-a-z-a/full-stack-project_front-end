@@ -8,6 +8,10 @@ import Form from "./components/Form/Form";
 const App = () => {
 
   const [tracks, setTracks] = useState([]);
+  
+  useEffect(() => {
+    getTracks();
+  }, [tracks]);
 
   const getTracks = () => {
     fetch("http://localhost:8080/tracks")
@@ -15,10 +19,7 @@ const App = () => {
       .then(json => setTracks(json))
       .catch(err => console.log(err))
   }
-
-  useEffect(() => {
-    getTracks();
-  },[]);
+  
 
   return (
     <div  className="app">

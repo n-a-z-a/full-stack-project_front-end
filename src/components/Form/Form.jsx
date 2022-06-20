@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import Button from "../Button/Button";
 import "./Form.scss";
 
 const Form = () => {
@@ -12,7 +13,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:8080/tracks', {
+    fetch('http://localhost:8080/track', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -38,10 +39,13 @@ const Form = () => {
         <label htmlFor="">Genre
         <input type="text" placeholder="Genre" onInput={(e) => setTrack({ ...track, genre: e.target.value })} />
         </label>
-        <button type="submit" className="button">Submit</button>
+        <Button key="submit" buttonText="Submit" type="submit"/>
       </form>
       <Link to="/">
-      <button type="submit" className="button">Home</button>
+      <Button key="home" buttonText="Home" type="submit"/>
+      </Link>
+      <Link to='/tracklist'>
+      <Button key="tracklist" buttonText="show tracks" type="submit"/>
       </Link>
     </div>
   );

@@ -1,12 +1,24 @@
 import "./Track.scss";
+import Button from "../Button/Button";
 
 const Track = ({track}) => {
   const {
+    trackId,
     title,
     artist,
     genre,
     dateCreated
   } = track;
+
+  const handleDelete = (e) => {
+    e.preventDefault()
+    fetch(`http://localhost:8080/track/${trackId}`, {
+      method: 'DELETE',
+    })
+    .then((response) => response.json())
+    .then((json => console.log(json)))
+    .catch(err => console.log(err))
+  }
 
   return (
     <div className="track">
@@ -14,6 +26,12 @@ const Track = ({track}) => {
       <p>By {artist}</p>
       <p>Genre: {genre}</p>
       <p>Added on: {dateCreated}</p>
+      <Button 
+        key="deletrack" 
+        buttonText="Delete" 
+        type="submit"
+        onClickEvent={handleDelete}
+        />
     </div>
   )
 }
