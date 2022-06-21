@@ -7,7 +7,7 @@ const Track = ({track}) => {
     title,
     artist,
     genre,
-    dateCreated
+    dateCreatedFormatted
   } = track;
 
   const handleDelete = (e) => {
@@ -20,12 +20,13 @@ const Track = ({track}) => {
     .catch(err => console.log(err))
   }
 
+
   return (
     <div className="track">
       <h3>{title}</h3>
       <p>By {artist}</p>
       <p>Genre: {genre}</p>
-      <p>Added on: {dateCreated}</p>
+      <p>Added on {dateCreatedFormatted}</p>
       <Button 
         key="deletrack" 
         buttonText="Delete" 
