@@ -1,0 +1,44 @@
+@use "../../styles/reset" as *;
+@use "../../styles/variables" as *;
+
+.home {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100vw;
+    height: 100vh;
+    gap:5rem;
+    background-image: radial-gradient(black 20%, white 20%);
+    background-position: 0 0;
+    background-size: 3rem 3rem;
+
+    &__heading {
+        // writing-mode:vertical-lr;
+        // text-orientation: upright;
+        // line-height:3rem;
+        width: 50%;
+        margin-top:1rem;
+        font-size: 6rem;
+        font-family: $font-primary;
+        text-align: center;
+        color: black;
+        background-color: #ffd60a;
+        line-height: 6rem;
+    }
+
+    &__buttons {
+        margin-top: 3rem;
+        // margin-left: 15rem;
+        padding:8rem;
+        width:max-content;
+        height: max-content;
+        display: grid;
+        gap:1rem;
+        justify-items: center;
+        align-items: center;
+        border-radius: 50% 50%;
+        background:black;
+    }
+}
+

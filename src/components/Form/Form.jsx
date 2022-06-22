@@ -27,26 +27,35 @@ const Form = () => {
   }
 
   return (
-    <div className="log-form">
-      <h2>Add A New Track</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="">Title
-        <input required type="text" placeholder="Title" onInput={(e) => setTrack({ ...track, title: e.target.value })} />
-        </label>
-        <label htmlFor="">Artist
-        <input required type="text" placeholder="Artist" onInput={(e) => setTrack({ ...track, artist: e.target.value })} />
-        </label>
-        <label htmlFor="">Genre
-        <input type="text" placeholder="Genre" onInput={(e) => setTrack({ ...track, genre: e.target.value })} />
-        </label>
-        <Button key="submit" buttonText="Submit" type="submit"/>
-      </form>
+    <div className="form">
+      <div className="form__topline">
+      <h1 className="form__topline--heading1">My favourite tracks</h1>
+      <div className="form__topline--links">
       <Link to="/">
-      <Button key="home" buttonText="Home" type="submit"/>
+        <Button key="home" buttonText="Home" type="submit" buttonStyle="button-secondary"/>
       </Link>
       <Link to='/tracklist'>
-      <Button key="tracklist" buttonText="show tracks" type="submit"/>
+        <Button key="tracklist" buttonText="show tracks" type="submit" buttonStyle="button-secondary"/>
       </Link>
+      </div>
+      </div>
+
+      <h2 className="form__heading2">Add A New Track</h2>
+
+      <form onSubmit={handleSubmit} className="form__main">
+        <label htmlFor="title" className="form__main--field">title
+        <input required type="text" 
+         onInput={(e) => setTrack({ ...track, title: e.target.value })} className="form__main--field-input"/>
+        </label>
+        <label htmlFor="artist" className="form__main--field">artist
+        <input required type="text"  onInput={(e) => setTrack({ ...track, artist: e.target.value })} className="form__main--field-input" />
+        </label>
+        <label htmlFor="genre" className="form__main--field">genre
+        <input type="text"  onInput={(e) => setTrack({ ...track, genre: e.target.value })} className="form__main--field-input"/>
+        </label>
+        <Button key="submit" buttonText="Submit" type="submit" buttonStyle="button-submit"/>
+      </form>
+
     </div>
   );
 }

@@ -5,14 +5,14 @@ const SearchBox = ({searchTerm, handleInput, label, placeholder}) => {
 
   
   return (
-    <form className='search-container'>
-      <label htmlFor="myLabel"> {label}
+    <form className='searchbox'>
+      <label htmlFor="myLabel" className='searchbox__label'> {label}
         <input 
           type="text" 
           placeholder={placeholder} 
           value={searchTerm} 
           onInput={handleInput}
-          className='searchbox'/>
+          className='searchbox__input'/>
       </label>
     </form>
   )

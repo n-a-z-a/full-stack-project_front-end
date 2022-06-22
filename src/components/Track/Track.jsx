@@ -23,11 +23,12 @@ const Track = ({track}) => {
 
   return (
     <div className="track">
-      <h3>{title}</h3>
-      <p>By {artist}</p>
-      <p>Genre: {genre}</p>
-      <p>Added on {dateCreatedFormatted}</p>
+      <h3 className="track__title">{title}</h3>
+      <p className="track__info">by {artist}</p>
+      <p className="track__info">genre: {genre}</p>
+      <p className="track__info">added on {dateCreatedFormatted}</p>
       <Button 
+        buttonStyle="button-delete"
         key="deletrack" 
         buttonText="Delete" 
         type="submit"

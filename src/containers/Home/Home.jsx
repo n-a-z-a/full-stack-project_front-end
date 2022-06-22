@@ -8,16 +8,24 @@ const Home = () => {
 
 
   return (
-    <div className="Home">
-      <h1>Favourite Tracks</h1>
+    <div className='home'>
+      <h1 className='home__heading'>MY FAVOURITE TRACKS</h1>
       
-      <div>
+      <div className='home__buttons'>
         <Link to='/tracklist'>
-        <Button key="tracklist" buttonText="show tracks" type="submit"/>
+        <Button 
+          buttonStyle="button-primary-top"
+          key="tracklist" 
+          buttonText="show tracks" 
+          type="submit"/>
         </Link>
         
         <Link to='/addatrack'>
-        <Button key="addatrack" buttonText="add a track" type="submit"/>
+        <Button 
+          buttonStyle="button-primary-bottom"
+          key="addatrack" 
+          buttonText="add a track" 
+          type="submit"/>
         </Link>
       </div>
 
