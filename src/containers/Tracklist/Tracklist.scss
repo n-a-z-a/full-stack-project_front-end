@@ -6,13 +6,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    background-image: radial-gradient(black 20%, white 20%);
+    min-width: 100vw;
+    width: fit-content;
+    min-height: 100vh;
+    height: fit-content;
+    background-image: radial-gradient($color-black 20%, $color-white 20%);
     background-position: 0 0;
     background-size: 1rem 1rem;
 
     &__topline {
-
         margin: 2rem;
         width: 90vw;
         display: flex;
@@ -26,8 +28,8 @@
             font-family: $font-primary;
             font-size: 3rem;
             text-transform: uppercase;
-            background-color: green;
-            color: white;
+            background-color: $color-secondary;
+            color: $color-white;
         }
 
         &--links {
@@ -44,7 +46,7 @@
         gap:0.5rem;
         align-items: center;
         justify-content: center;
-        background-color: #e85d04;
+        background-color: $color-tertiary;
 
         &--heading {
             font-family: $font-secondary;
@@ -52,16 +54,15 @@
             text-align: center;
             font-size: 2rem;
         }
-
     }
 
     &__output {
         margin-top: 1rem;
         padding:0.8rem;
         text-align: center;
-        font-family: $font-buttons;
+        font-family: $font-tertiary;
         font-size: 1.2rem;
-        background-color: #e85d04;
+        background-color: $color-tertiary;
     }
 
     &__tracks {
@@ -70,12 +71,11 @@
         gap: 0.8rem;
         justify-items: center;
         clear: both;
-        background-color: gold;
+        background-color: $color-primary;
         min-height: 100vh;
         min-width: 95vw;
         margin:1rem;
         padding:1.5rem;
-        // border-radius: 4rem;
     }
 
     &__links {
@@ -83,4 +83,38 @@
         flex-direction: row;
         gap: 1rem;
     }
+}
+
+@media screen and (max-width: 600px) {
+
+.tracklist {
+
+    &__topline {
+        flex-direction: column;
+        margin: 1rem;
+
+        &--heading {
+            padding: 0.2rem;
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+
+    &__searchboxes {
+        flex-direction: column;
+    }
+
+    &__output {
+        padding:0.6rem;
+        font-size: 1rem;
+    }
+  
+    &__tracks {
+        grid-template-columns: 1fr;
+        margin:0.2rem;
+        padding:0.8rem;
+    }
+
+}
+
 }

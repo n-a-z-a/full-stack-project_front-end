@@ -9,7 +9,7 @@
 
     &__label {
         text-transform: uppercase;
-        font-family: $font-buttons;
+        font-family: $font-tertiary;
         margin:0.5rem;
     }
 
@@ -18,8 +18,8 @@
         height: 1.8rem;
         margin: 0.5rem;
         padding:0.5rem;
-        border: 0.2rem solid black;
+        border: 0.2rem solid $color-black;
         font-size: 0.8rem;
-        font-family: $font-buttons;
+        font-family: $font-tertiary;
     }
 }

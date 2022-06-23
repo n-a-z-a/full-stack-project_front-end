@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.scss';
 import Home from "./containers/Home/Home";
 import Tracklist from "./containers/Tracklist/Tracklist";
-import Form from "./components/Form/Form";
+import Form from "./containers/Form/Form";
 
 const App = () => {
 
