@@ -13,7 +13,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:8080/track', {
+    fetch('https://full-stack-project-back-end-u4cjn37neq-nw.a.run.app/track', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

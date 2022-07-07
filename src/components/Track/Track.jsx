@@ -12,7 +12,7 @@ const Track = ({track}) => {
 
   const handleDelete = (e) => {
     e.preventDefault()
-    fetch(`http://localhost:8080/track/${trackId}`, {
+    fetch(`https://full-stack-project-back-end-u4cjn37neq-nw.a.run.app/${trackId}`, {
       method: 'DELETE',
     })
     .then((response) => response.json())

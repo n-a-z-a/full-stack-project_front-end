@@ -17,7 +17,7 @@ const App = () => {
   }, [tracks]);
 
   const getTracks = () => {
-    fetch("http://localhost:8080/tracks")
+    fetch("https://full-stack-project-back-end-u4cjn37neq-nw.a.run.app/tracks")
       .then(res => res.json())
       .then(json => setTracks(json))
       .catch(err => console.log(err))
