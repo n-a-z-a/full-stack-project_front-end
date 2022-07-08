@@ -14,7 +14,7 @@ const App = () => {
   
   useEffect(() => {
     getTracks();
-  }, [tracks]);
+  }, []);
 
   const getTracks = () => {
     fetch("https://full-stack-project-back-end-u4cjn37neq-nw.a.run.app/tracks")
